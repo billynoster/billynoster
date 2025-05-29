@@ -1,3 +1,5 @@
+import CheqCaseStudy from "../case-study"
+
 export default function Page() {
-  return <div>Hello, world!</div>
+  return <CheqCaseStudy />
 }
