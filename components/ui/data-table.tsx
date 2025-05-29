@@ -15,7 +15,8 @@ export function DataTable<T>({ data, columns, className, onRowAction }: DataTabl
       {/* Table Header */}
       <div className="bg-gradient-to-r from-stone-50 to-stone-100 border-b border-stone-200">
         <div
-          className={`grid grid-cols-${columns.length} gap-6 px-6 py-4 text-xs font-bold text-stone-600 uppercase tracking-wider`}
+          className="grid gap-6 px-6 py-4 text-xs font-bold text-stone-600 uppercase tracking-wider"
+          style={{ gridTemplateColumns: `repeat(${columns.length}, minmax(0, 1fr))` }}
         >
           {columns.map((column) => (
             <div key={column.id}>{column.header}</div>
@@ -28,7 +29,8 @@ export function DataTable<T>({ data, columns, className, onRowAction }: DataTabl
         {data.map((row, rowIndex) => (
           <div
             key={rowIndex}
-            className={`grid grid-cols-${columns.length} gap-6 px-6 py-4 items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-200`}
+            className="grid gap-6 px-6 py-4 items-center hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-200"
+            style={{ gridTemplateColumns: `repeat(${columns.length}, minmax(0, 1fr))` }}
           >
             {columns.map((column) => (
               <div key={column.id}>

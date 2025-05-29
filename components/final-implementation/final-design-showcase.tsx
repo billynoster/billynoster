@@ -107,7 +107,7 @@ export function FinalDesignShowcase() {
                     activeDesign === 1 ? "scan" :
                     activeDesign === 2 ? "cart" :
                     activeDesign === 3 ? "orders" :
-                    activeDesign === 4 ? undefined :
+                    activeDesign === 4 ? "home" :
                     activeDesign === 5 ? "orders" :
                     "payment"
                   }
@@ -136,8 +136,8 @@ export function FinalDesignShowcase() {
 
         {/* Design Features */}
         <div className="mt-8 grid md:grid-cols-3 gap-6">
-          {getDesignFeatures(activeDesign).map((feature, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
+          {getDesignFeatures(activeDesign).map((feature) => (
+            <div key={feature.title} className="bg-white p-4 rounded-lg shadow-sm border border-slate-200">
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                 <h5 className="font-semibold text-slate-800 text-sm">{feature.title}</h5>
@@ -1047,14 +1047,14 @@ function CartDesign() {
   const [cartItems, setCartItems] = useState([
     {
       name: "Classic Cheese Pizza",
-      image: "/images/cheese pizza.jpg",
+      image: "/images/cheese-pizza.jpg",
       size: "Medium",
       quantity: 1,
       price: 12.99,
     },
     {
       name: "Pepperoni Pizza",
-      image: "/images/pepperoni pizza.jpg",
+      image: "/images/pepperoni-pizza.jpg",
       size: "Medium",
       quantity: 1,
       price: 14.99,
@@ -1317,5 +1317,8 @@ function getDesignFeatures(designIndex: number) {
     ],
   ]
 
-  return features[designIndex] || []
+  if (features[designIndex]) return features[designIndex];
+  return [
+    { title: "Coming Soon", description: "Feature details for this screen will be added in a future update." }
+  ];
 }
