@@ -25,11 +25,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ meta }) => {
               <Monitor className="w-4 h-4" />
               <span className="text-sm font-medium">{meta.category}</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              {meta.title}
+            <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-4">
+              Tattle: <span className="text-blue-400">Account Setup Redesign</span>
             </h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">{meta.subtitle}</p>
-            
+            <div className="w-16 h-1 bg-blue-500 rounded-full opacity-70 mb-6" />
+            <p className="text-2xl lg:text-3xl text-blue-100 italic max-w-2xl mb-8">
+              {meta.subtitle}
+            </p>
+            <div className="flex flex-wrap gap-3 text-sm mb-8">
+              <span className="inline-flex items-center bg-slate-800/70 text-slate-100 px-3 py-1 rounded-full font-medium">
+                <span className="mr-1">{meta.year}</span>
+              </span>
+              <span className="inline-flex items-center bg-slate-800/70 text-slate-100 px-3 py-1 rounded-full font-medium">
+                <span className="mr-1">{meta.author}</span>
+              </span>
+              <span className="inline-flex items-center bg-slate-800/70 text-slate-100 px-3 py-1 rounded-full font-medium">
+                <span className="mr-1">{meta.domain}</span>
+              </span>
+            </div>
             {/* Key Metrics */}
             <div className="grid grid-cols-3 gap-4 mb-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -52,18 +65,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ meta }) => {
                   <span className="text-sm text-blue-200">Clients</span>
                 </div>
                 <div className="text-2xl font-bold text-white">2</div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-6 text-sm text-blue-200 mt-8">
-              <div className="flex items-center gap-2">
-                <span>{meta.year}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span>{meta.author}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span>{meta.domain}</span>
               </div>
             </div>
           </div>

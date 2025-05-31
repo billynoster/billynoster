@@ -202,93 +202,95 @@ export default function TattleCaseStudy() {
 
         {/* Improved Account Setup Interface */}
         <Section id="improved-interface" title="Improved Account Setup Interface">
-          {/* Tab Navigation */}
-          <div className="flex items-center gap-2 border-b border-stone-200 mb-4 overflow-x-auto">
-            {['Groups', 'Teams', 'Locations', 'Email Templates', 'Branding', 'Default Links', 'Day Parts'].map(tab => (
-              <button
-                key={tab}
-                className={`px-3 py-2 text-sm font-medium rounded-t border-b-2 transition-colors duration-200 whitespace-nowrap ${tab === 'Groups' ? 'border-stone-900 text-stone-900 bg-stone-100' : 'border-transparent text-stone-500 hover:text-stone-900 hover:bg-stone-100'}`}
-                aria-current={tab === 'Groups' ? 'page' : undefined}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-
-          {/* Search and New Group */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
-            <input
-              type="text"
-              placeholder="Search groups"
-              className="w-full md:w-72 px-3 py-2 border border-stone-200 rounded-md bg-stone-50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
-              aria-label="Search groups"
-            />
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm hover:bg-blue-700 transition-colors">
-              New Group
-            </button>
-          </div>
-
-          {/* Data Table */}
-          <div className="overflow-x-auto border border-stone-200 rounded-lg bg-white">
-            <table className="min-w-full text-sm">
-              <thead>
-                <tr className="bg-stone-50 text-stone-700">
-                  <th className="px-4 py-3 text-left font-semibold">Group</th>
-                  <th className="px-4 py-3 text-left font-semibold">Status</th>
-                  <th className="px-4 py-3 text-left font-semibold">Location</th>
-                  <th className="px-4 py-3 text-left font-semibold">Users</th>
-                  <th className="px-4 py-3 text-left font-semibold">Store URL</th>
-                  <th className="px-4 py-3 text-left font-semibold">Notes</th>
-                  <th className="px-4 py-3 text-left font-semibold">Action</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-stone-100">
-                {[1,2,3,4,5,6,7,8,9,10].map((i) => (
-                  <tr key={i} className="hover:bg-stone-50 transition-colors">
-                    <td className="px-4 py-3 whitespace-nowrap">
-                      <span className="inline-flex items-center gap-2">
-                        <span className="bg-stone-200 text-stone-900 text-xs font-medium px-3 py-1 rounded-full">MRG PIZZA NV</span>
-                      </span>
-                    </td>
-                    <td className="px-4 py-3">
-                      <span className="inline-block bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full">Active</span>
-                    </td>
-                    <td className="px-4 py-3">6</td>
-                    <td className="px-4 py-3">10</td>
-                    <td className="px-4 py-3">
-                      <a href="#" className="text-blue-600 hover:underline flex items-center gap-1">mrg/pizza/iv <span className="w-3 h-3">🔗</span></a>
-                    </td>
-                    <td className="px-4 py-3">
-                      <a href="#" className="text-blue-600 hover:underline">View Note</a>
-                    </td>
-                    <td className="px-4 py-3">
-                      <button className="bg-stone-100 text-stone-700 px-3 py-1 rounded-md text-xs font-medium border border-stone-200 hover:bg-stone-200 transition-colors flex items-center gap-2">
-                        Actions <span className="w-3 h-3">▼</span>
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Pagination */}
-          <div className="flex items-center justify-between mt-4">
-            <div className="text-sm text-stone-500">1 of 10 of 800 Results</div>
-            <div className="flex items-center gap-1">
-              <button className="w-8 h-8 rounded-md border border-stone-200 flex items-center justify-center text-sm hover:bg-stone-100 text-stone-400 transition-all" aria-label="Previous page">&lt;</button>
-              {[1,2,3,4,5].map(page => (
+          <div className="bg-white rounded-2xl shadow-lg border border-stone-200 p-8">
+            {/* Tab Navigation */}
+            <div className="flex items-center gap-2 border-b border-stone-200 mb-4 overflow-x-auto">
+              {['Groups', 'Teams', 'Locations', 'Email Templates', 'Branding', 'Default Links', 'Day Parts'].map(tab => (
                 <button
-                  key={page}
-                  className={`w-8 h-8 rounded-md flex items-center justify-center text-sm font-medium transition-all ${page === 1 ? 'bg-stone-900 text-white shadow' : 'border border-stone-200 text-stone-700 hover:bg-stone-100'}`}
-                  aria-label={`Page ${page}`}
-                  aria-current={page === 1 ? 'page' : undefined}
+                  key={tab}
+                  className={`px-3 py-2 text-sm font-medium rounded-t border-b-2 transition-colors duration-200 whitespace-nowrap ${tab === 'Groups' ? 'border-stone-900 text-stone-900 bg-stone-100' : 'border-transparent text-stone-500 hover:text-stone-900 hover:bg-stone-100'}`}
+                  aria-current={tab === 'Groups' ? 'page' : undefined}
                 >
-                  {page}
+                  {tab}
                 </button>
               ))}
-              <span className="text-stone-400 px-1">...</span>
-              <button className="w-8 h-8 rounded-md border border-stone-200 flex items-center justify-center text-sm hover:bg-stone-100 text-stone-700 transition-all" aria-label="Next page">&gt;</button>
+            </div>
+
+            {/* Search and New Group */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
+              <input
+                type="text"
+                placeholder="Search groups"
+                className="w-full md:w-72 px-3 py-2 border border-stone-200 rounded-md bg-stone-50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
+                aria-label="Search groups"
+              />
+              <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium shadow-sm hover:bg-blue-700 transition-colors">
+                New Group
+              </button>
+            </div>
+
+            {/* Data Table */}
+            <div className="overflow-x-auto border border-stone-200 rounded-lg bg-white">
+              <table className="min-w-full text-sm">
+                <thead>
+                  <tr className="bg-stone-50 text-stone-700">
+                    <th className="px-4 py-3 text-left font-semibold">Group</th>
+                    <th className="px-4 py-3 text-left font-semibold">Status</th>
+                    <th className="px-4 py-3 text-left font-semibold">Location</th>
+                    <th className="px-4 py-3 text-left font-semibold">Users</th>
+                    <th className="px-4 py-3 text-left font-semibold">Store URL</th>
+                    <th className="px-4 py-3 text-left font-semibold">Notes</th>
+                    <th className="px-4 py-3 text-left font-semibold">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-stone-100">
+                  {[1,2,3,4,5,6,7,8,9,10].map((i) => (
+                    <tr key={i} className="hover:bg-stone-50 transition-colors">
+                      <td className="px-4 py-3 whitespace-nowrap">
+                        <span className="inline-flex items-center gap-2">
+                          <span className="bg-stone-200 text-stone-900 text-xs font-medium px-3 py-1 rounded-full">MRG PIZZA NV</span>
+                        </span>
+                      </td>
+                      <td className="px-4 py-3">
+                        <span className="inline-block bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full">Active</span>
+                      </td>
+                      <td className="px-4 py-3">6</td>
+                      <td className="px-4 py-3">10</td>
+                      <td className="px-4 py-3">
+                        <a href="#" className="text-blue-600 hover:underline flex items-center gap-1">mrg/pizza/iv <span className="w-3 h-3">🔗</span></a>
+                      </td>
+                      <td className="px-4 py-3">
+                        <a href="#" className="text-blue-600 hover:underline">View Note</a>
+                      </td>
+                      <td className="px-4 py-3">
+                        <button className="bg-stone-100 text-stone-700 px-3 py-1 rounded-md text-xs font-medium border border-stone-200 hover:bg-stone-200 transition-colors flex items-center gap-2">
+                          Actions <span className="w-3 h-3">▼</span>
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Pagination */}
+            <div className="flex items-center justify-between mt-4">
+              <div className="text-sm text-stone-500">1 of 10 of 800 Results</div>
+              <div className="flex items-center gap-1">
+                <button className="w-8 h-8 rounded-md border border-stone-200 flex items-center justify-center text-sm hover:bg-stone-100 text-stone-400 transition-all" aria-label="Previous page">&lt;</button>
+                {[1,2,3,4,5].map(page => (
+                  <button
+                    key={page}
+                    className={`w-8 h-8 rounded-md flex items-center justify-center text-sm font-medium transition-all ${page === 1 ? 'bg-stone-900 text-white shadow' : 'border border-stone-200 text-stone-700 hover:bg-stone-100'}`}
+                    aria-label={`Page ${page}`}
+                    aria-current={page === 1 ? 'page' : undefined}
+                  >
+                    {page}
+                  </button>
+                ))}
+                <span className="text-stone-400 px-1">...</span>
+                <button className="w-8 h-8 rounded-md border border-stone-200 flex items-center justify-center text-sm hover:bg-stone-100 text-stone-700 transition-all" aria-label="Next page">&gt;</button>
+              </div>
             </div>
           </div>
         </Section>

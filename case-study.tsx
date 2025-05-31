@@ -14,34 +14,31 @@ export default function CheqCaseStudy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white">
-        <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="relative text-white" style={{ minHeight: '400px' }}>
+        <img
+          src="/images/cheq-hero.jpg"
+          alt="CHEQ Hero"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-800/70 z-10" />
+        <div className="relative max-w-6xl mx-auto px-6 py-16 z-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-blue-600 hover:bg-blue-700">Mobile App Design</Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">CHEQ Mobile App Redesign</h1>
-              <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                Transforming the mobile ordering experience to eliminate interruptions and enhance customer satisfaction
-                for restaurants, stadiums, and venues.
+              <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-4">
+                CHEQ: <span className="text-blue-400">The Next Generation</span> of Mobile Ordering
+              </h1>
+              <div className="w-16 h-1 bg-blue-500 rounded-full opacity-70 mb-6" />
+              <p className="text-2xl lg:text-3xl text-blue-100 italic max-w-2xl mb-8">
+                We reimagined the CHEQ app to deliver instant, reliable ordering—empowering guests and partners with a modern, intuitive experience.
               </p>
-              <div className="flex flex-wrap gap-4 text-sm">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>August 2023</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4" />
-                  <span>Billy No, Product Designer</span>
-                </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-8 transform rotate-3 shadow-2xl">
-                <Smartphone className="w-24 h-24 mx-auto text-white mb-4" />
-                <div className="text-center">
-                  <div className="text-2xl font-bold mb-2">CHEQ</div>
-                  <div className="text-sm opacity-90">Quick QR • Ordering • Split Bills</div>
-                </div>
+              <div className="flex flex-wrap gap-3 text-sm">
+                <span className="inline-flex items-center bg-slate-800/70 text-slate-100 px-3 py-1 rounded-full font-medium">
+                  <Calendar className="w-4 h-4 mr-1" /> August 2023
+                </span>
+                <span className="inline-flex items-center bg-slate-800/70 text-slate-100 px-3 py-1 rounded-full font-medium">
+                  <Users className="w-4 h-4 mr-1" /> Billy No, Product Designer
+                </span>
               </div>
             </div>
           </div>
