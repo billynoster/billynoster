@@ -11,7 +11,7 @@ interface SectionProps {
 export const Section: React.FC<SectionProps> = ({ id, title, className, children }) => {
   return (
     <section id={id} className={cn("mb-20", className)} aria-labelledby={`section-${id}`}>
-      <h2 id={`section-${id}`} className="text-3xl font-bold mb-8 text-stone-800">
+      <h2 id={`section-${id}`} className="text-3xl font-bold mb-4 text-stone-800">
         {title}
       </h2>
       {children}

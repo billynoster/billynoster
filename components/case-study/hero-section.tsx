@@ -1,5 +1,5 @@
 import type React from "react"
-import { Monitor } from "lucide-react"
+import { Monitor, ArrowRight, Clock, Users, Building2 } from "lucide-react"
 import type { CaseStudyMeta } from "../../types/case-study"
 
 interface HeroSectionProps {
@@ -8,11 +8,15 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ meta }) => {
   return (
-    <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
+    <div className="relative text-white overflow-hidden" style={{ minHeight: '600px' }}>
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-cyan-400/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-400/10 to-transparent rounded-full blur-3xl"></div>
+      <img 
+        src="/images/hero.jpg" 
+        alt="Tattle Account Setup Redesign background" 
+        className="absolute inset-0 w-full h-full object-cover z-0" 
+        style={{ minHeight: '600px' }}
+      />
+      <div className="absolute inset-0 bg-black/60 z-0" /> {/* Optional: overlay for readability */}
 
       <div className="max-w-6xl mx-auto px-6 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -25,7 +29,33 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ meta }) => {
               {meta.title}
             </h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">{meta.subtitle}</p>
-            <div className="flex flex-wrap gap-6 text-sm text-blue-200">
+            
+            {/* Key Metrics */}
+            <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Clock className="w-4 h-4 text-blue-300" />
+                  <span className="text-sm text-blue-200">Time Saved</span>
+                </div>
+                <div className="text-2xl font-bold text-white">85%</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Users className="w-4 h-4 text-blue-300" />
+                  <span className="text-sm text-blue-200">Locations</span>
+                </div>
+                <div className="text-2xl font-bold text-white">10K+</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <Building2 className="w-4 h-4 text-blue-300" />
+                  <span className="text-sm text-blue-200">Clients</span>
+                </div>
+                <div className="text-2xl font-bold text-white">2</div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-6 text-sm text-blue-200 mt-8">
               <div className="flex items-center gap-2">
                 <span>{meta.year}</span>
               </div>
@@ -37,18 +67,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ meta }) => {
               </div>
             </div>
           </div>
-          <div className="relative">
-            <div className="bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-700 rounded-2xl p-8 transform rotate-2 shadow-2xl border border-white/10">
-              <Monitor className="w-24 h-24 mx-auto text-white mb-4 drop-shadow-lg" />
-              <div className="text-center">
-                <div className="text-2xl font-bold mb-2 text-white drop-shadow-md">TATTLE</div>
-                <div className="text-sm opacity-90 text-blue-100">Account Setup • Groups • Locations</div>
-              </div>
-            </div>
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60 animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-60 animate-pulse delay-1000"></div>
-          </div>
+          {/* Right column intentionally left empty for now */}
         </div>
       </div>
     </div>

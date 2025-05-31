@@ -3,14 +3,12 @@ import { Plus, User, Building, X } from "lucide-react"
 // Low-Fidelity Create Location Form
 export function LowFidelityCreateLocation() {
   return (
-    <div className="space-y-8">
-      <div className="text-center mb-8">
-        <h4 className="text-lg font-semibold text-stone-700 mb-2">Low-Fidelity Wireframe</h4>
-        <p className="text-sm text-stone-600">Focus: Content structure and layout hierarchy</p>
-      </div>
-
+    <div className="bg-white p-8 rounded-xl shadow-sm border border-stone-200 max-w-[1104px] mx-auto">
+      {/* Fidelity Title and Subtext */}
+      <h4 className="text-lg font-semibold text-stone-800 mb-2">Low-Fidelity</h4>
+      <p className="text-stone-600 mb-4">Structure and layout</p>
       {/* Wireframe Container */}
-      <div className="border-2 border-dashed border-gray-400 bg-gray-50 p-8 rounded-lg max-w-4xl mx-auto">
+      <div className="border-2 border-dashed border-gray-400 bg-gray-50 p-8 rounded-lg">
         {/* Header Wireframe */}
         <div className="border border-gray-400 p-4 mb-6 bg-white">
           <div className="flex justify-between items-center">
@@ -95,7 +93,7 @@ export function LowFidelityCreateLocation() {
       </div>
 
       {/* Design Notes */}
-      <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400 max-w-4xl mx-auto">
+      <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400 max-w-[1104px] mx-auto mt-8">
         <h5 className="font-semibold text-blue-800 mb-2">Low-Fidelity Rationale</h5>
         <ul className="text-sm text-blue-700 space-y-1">
           <li>• Focused on layout structure using basic shapes and boxes</li>
@@ -111,14 +109,12 @@ export function LowFidelityCreateLocation() {
 // Medium-Fidelity Create Location Form
 export function MediumFidelityCreateLocation() {
   return (
-    <div className="space-y-8">
-      <div className="text-center mb-8">
-        <h4 className="text-lg font-semibold text-stone-700 mb-2">Medium-Fidelity Prototype</h4>
-        <p className="text-sm text-stone-600">Focus: Visual styling and interactive elements</p>
-      </div>
-
+    <div className="bg-white p-8 rounded-xl shadow-sm border border-stone-200 max-w-[1104px] mx-auto">
+      {/* Fidelity Title and Subtext */}
+      <h4 className="text-lg font-semibold text-stone-800 mb-2">Medium-Fidelity</h4>
+      <p className="text-stone-600 mb-4">Refined interactions and visual hierarchy</p>
       {/* Prototype Container */}
-      <div className="bg-white border border-stone-200 rounded-xl shadow-sm overflow-hidden max-w-4xl mx-auto">
+      <div className="bg-white border border-stone-200 rounded-xl shadow-sm overflow-hidden">
         {/* Header */}
         <div className="bg-stone-50 border-b border-stone-200 p-4">
           <div className="flex justify-between items-center">
@@ -145,21 +141,25 @@ export function MediumFidelityCreateLocation() {
           {/* Form Fields - First Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-stone-700">Select Parent Group</label>
+              <label className="text-sm font-semibold text-stone-700">Select Parent Group</label>
               <div className="relative">
-                <select className="w-full pl-3 pr-12 py-2 border border-stone-300 rounded-lg bg-white text-stone-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <select className="appearance-none w-full pl-4 pr-16 py-2 border border-stone-300 rounded-lg bg-white text-transparent focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                   <option>MRG PIZZA, NV</option>
                 </select>
-                <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-full flex items-center justify-start pl-4 pointer-events-none">
+                  <span className="text-base font-medium text-stone-800">MRG PIZZA, NV</span>
+                  <div className="ml-2 w-6 h-6 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center shadow-sm">
                     <span className="text-white text-xs font-bold">M</span>
                   </div>
                 </div>
+                <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 text-stone-400 pr-2 pointer-events-none" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-stone-700">Store URL</label>
+              <label className="text-sm font-semibold text-stone-700">Store URL</label>
               <input
                 type="text"
                 value="grouplink.tv"
@@ -169,7 +169,7 @@ export function MediumFidelityCreateLocation() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-stone-700">Location Manager</label>
+              <label className="text-sm font-semibold text-stone-700">Location Manager</label>
               <input
                 type="text"
                 value="Christine Applegate"
@@ -182,7 +182,7 @@ export function MediumFidelityCreateLocation() {
           {/* Form Fields - Second Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-stone-700">Display Label</label>
+              <label className="text-sm font-semibold text-stone-700">Display Label</label>
               <input
                 type="text"
                 value="Lorem Ipsum"
@@ -192,7 +192,7 @@ export function MediumFidelityCreateLocation() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-stone-700">Location Address</label>
+              <label className="text-sm font-semibold text-stone-700">Location Address</label>
               <input
                 type="text"
                 value="217 & Thomas Ave"
@@ -202,7 +202,7 @@ export function MediumFidelityCreateLocation() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-stone-700">Customer Reply Email</label>
+              <label className="text-sm font-semibold text-stone-700">Customer Reply Email</label>
               <input
                 type="email"
                 value="support@blazepizza.com"
@@ -215,7 +215,7 @@ export function MediumFidelityCreateLocation() {
           {/* Form Fields - Third Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-stone-700">Store ID</label>
+              <label className="text-sm font-semibold text-stone-700">Store ID</label>
               <input
                 type="text"
                 value="117"
@@ -225,7 +225,7 @@ export function MediumFidelityCreateLocation() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-medium text-stone-700">Franchise location</label>
+              <label className="text-sm font-semibold text-stone-700">Franchise location</label>
               <div className="flex gap-4 pt-2">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="franchise" className="text-blue-600 focus:ring-blue-500" defaultChecked />
@@ -253,7 +253,7 @@ export function MediumFidelityCreateLocation() {
       </div>
 
       {/* Design Notes */}
-      <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400 max-w-4xl mx-auto">
+      <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400 max-w-[1104px] mx-auto mt-8">
         <h5 className="font-semibold text-green-800 mb-2">Medium-Fidelity Rationale</h5>
         <ul className="text-sm text-green-700 space-y-1">
           <li>• Added proper typography hierarchy and color scheme</li>
@@ -270,14 +270,12 @@ export function MediumFidelityCreateLocation() {
 // High-Fidelity Create Location Form
 export function HighFidelityCreateLocation() {
   return (
-    <div className="space-y-8">
-      <div className="text-center mb-8">
-        <h4 className="text-lg font-semibold text-stone-700 mb-2">High-Fidelity Implementation</h4>
-        <p className="text-sm text-stone-600">Focus: Production-ready design with enhanced interactions</p>
-      </div>
-
+    <div className="bg-white p-8 rounded-xl shadow-lg border border-stone-200 max-w-[1104px] mx-auto">
+      {/* Fidelity Title and Subtext */}
+      <h4 className="text-lg font-semibold text-stone-800 mb-2">High-Fidelity</h4>
+      <p className="text-stone-600 mb-4">Production-ready design with enhanced interactions</p>
       {/* Final Implementation */}
-      <div className="bg-white border border-stone-200 rounded-xl shadow-lg overflow-hidden max-w-4xl mx-auto">
+      <div className="bg-white border border-stone-200 rounded-xl shadow-lg overflow-hidden">
         {/* Enhanced Header */}
         <div className="bg-gradient-to-r from-stone-50 to-stone-100 border-b border-stone-200 p-4">
           <div className="flex justify-between items-center">
@@ -311,14 +309,18 @@ export function HighFidelityCreateLocation() {
             <div className="space-y-2">
               <label className="text-sm font-semibold text-stone-700">Select Parent Group</label>
               <div className="relative">
-                <select className="w-full pl-4 pr-16 py-3 border border-stone-300 rounded-xl bg-white text-stone-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm transition-all">
+                <select className="appearance-none w-full pl-4 pr-16 py-3 border border-stone-300 rounded-xl bg-white text-transparent focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm transition-all">
                   <option>MRG PIZZA, NV</option>
                 </select>
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                  <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center shadow-sm">
+                <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-full flex items-center justify-start pl-4 pointer-events-none">
+                  <span className="text-base font-medium text-stone-800">MRG PIZZA, NV</span>
+                  <div className="ml-2 w-6 h-6 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center shadow-sm">
                     <span className="text-white text-xs font-bold">M</span>
                   </div>
                 </div>
+                <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 text-stone-400 pr-2 pointer-events-none" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
             </div>
 
@@ -353,19 +355,21 @@ export function HighFidelityCreateLocation() {
               Create
             </button>
           </div>
-        </div>
-      </div>
 
-      {/* Design Notes */}
-      <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400 max-w-4xl mx-auto">
-        <h5 className="font-semibold text-purple-800 mb-2">High-Fidelity Rationale</h5>
-        <ul className="text-sm text-purple-700 space-y-1">
-          <li>• Enhanced visual polish with gradients and shadows</li>
-          <li>• Added scale transforms and smooth transitions</li>
-          <li>• Implemented enhanced spacing and typography</li>
-          <li>• Added production-ready interaction states</li>
-          <li>• Refined accessibility and visual hierarchy</li>
-        </ul>
+          {/* High-Fidelity Rationale (moved inside the card) */}
+          <div className="mt-8">
+            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+              <h5 className="font-semibold text-purple-800 mb-2 text-lg">High-Fidelity Rationale</h5>
+              <ul className="text-sm text-purple-700 space-y-1">
+                <li>• Enhanced visual polish with gradients and shadows</li>
+                <li>• Added scale transforms and smooth transitions</li>
+                <li>• Implemented enhanced spacing and typography</li>
+                <li>• Added production-ready interaction states</li>
+                <li>• Refined accessibility and visual hierarchy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
